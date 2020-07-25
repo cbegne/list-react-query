@@ -1,29 +1,18 @@
 import React, { useContext } from "react";
-import { List, ListItem, ListIcon, Tag, Link } from "@chakra-ui/core";
+import { List, ListItem, ListIcon, Link } from "@chakra-ui/core";
 import { Title, LoadingText } from "../components/Title";
 import { VideoIdContext } from "../OneVideoContext";
-import { useFetchVideos, useDeleteVideo } from "../api.hooks";
+import { useFetchVideos } from "../api.hooks";
+import { DeleteTag } from "./DeleteTag";
 
 export const VideosList = () => {
   const { setVideoId } = useContext(VideoIdContext);
   const { data: list, isFetching } = useFetchVideos();
-  const [mutateDelete] = useDeleteVideo();
-
-  const handleDelete = async (event) => {
-    const { id } = event.target.dataset;
-    try {
-      await mutateDelete(parseInt(id, 10));
-    } catch (err) {
-      console.log(err);
-    }
-  };
 
   const switchToPresentation = (event) => {
     const { id } = event.target.dataset;
     setVideoId(id);
   };
-
-  console.log(list, isFetching);
 
   return (
     <>
@@ -38,15 +27,7 @@ export const VideosList = () => {
               <Link as="button" data-id={id} onClick={switchToPresentation}>
                 {title}
               </Link>
-              <Tag
-                as="button"
-                size="sm"
-                ml={2}
-                data-id={id}
-                onClick={handleDelete}
-              >
-                Delete
-              </Tag>
+              <DeleteTag id={id} />
             </ListItem>
           ))}
       </List>

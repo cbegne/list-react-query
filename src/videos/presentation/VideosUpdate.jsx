@@ -11,12 +11,10 @@ export const VideosUpdate = () => {
   const [mutateUpdate] = useUpdateVideo();
   const [mutateDelete] = useDeleteVideo();
   const { data: infos } = useFetchOneVideo(videoId);
-  // const { updateVideo, deleteVideo } = useVideos();
 
   const onSubmit = async (data) => {
     try {
       await mutateUpdate({ id: infos.id, data });
-      // fetchOneVideoInfos(infos.id);
     } catch (err) {
       console.log(err);
     }

@@ -37,7 +37,7 @@ export const useCreateVideo = () => {
 
 export const useDeleteVideo = () => {
   return useMutation((id) => deleteVideo(id), {
-    //onSuccess: queryCache.invalidateQueries("videos"),
+    onSuccess: () => queryCache.invalidateQueries("videos"),
   });
 };
 
@@ -50,7 +50,7 @@ export const useUpdateVideo = () => {
       return () => queryCache.setQueryData(["videos", id], previousVideo);
     },
     onError: (error, values, rollback) => rollback(),
-    // onSuccess: (data) =>
-    //   console.log("success", data) && queryCache.invalidateQueries(["videos"]),
+    onSuccess: (data) =>
+      console.log("success", data) && queryCache.invalidateQueries(["videos"]),
   });
 };
