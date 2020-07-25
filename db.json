@@ -1,0 +1,28 @@
+{
+  "videos": [
+    {
+      "id": 1,
+      "title": "React Query: It’s Time to Break up with your 'Global State'! – Tanner Linsley",
+      "link": "https://www.youtube.com/watch?v=seU46c6Jz7E",
+      "content": "An increasing amount of data in our React applications is coming from remote and asynchronous sources and, even worse, continues to masquerade as “global state”. In this talk, you’ll get the lowdown on why most of your “global state” isn’t really state at all and how React Query can help you fetch, cache and manage your asynchronous data with a fraction of the effort and code that you’re used to."
+    },
+    {
+      "id": 2,
+      "title": "Getting Closure on React Hooks by Shawn Wang | JSConf.Asia 2019",
+      "link": "https://www.youtube.com/watch?v=KJP1E-Y-xyo",
+      "content": "The design of React Hooks requires a good understanding of closures in JavaScript. In this talk, we’ll reintroduce closures by building a tiny clone of React! This will serve two purposes – to demonstrate the effective use of closures, and to show how you can build a Hooks clone in just 29 lines of readable JS. Finally, we arrive at how you get Custom Hooks and the Rules of Hooks out of this incredible mental model!"
+    },
+    {
+      "title": "ReactiveConf 2019 - Mark Dalgleish: Rethinking Design Practices",
+      "link": "https://www.youtube.com/watch?v=jnV1u67_yVg",
+      "content": "Thanks to modern component-oriented architectures, the front-end community has been naturally gravitating towards design systems as a way of standardising our respective design languages into reusable components. When done successfully, it suddenly becomes trivial to translate standard designs into code. In fact, we may even find that this translation step starts to feel somewhat redundant. In a world of components, how should our design processes change? How should our tooling change? How should we, as front-end developers, better enable this change? In this talk, we’ll look at the current state of design and development, and where we could go – if we’re willing to push for it.",
+      "id": 3
+    },
+    {
+      "title": "ggghgfffgggglldsfdssfdfff",
+      "link": "fhg",
+      "content": "hfg",
+      "id": 6
+    }
+  ]
+}
